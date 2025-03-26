@@ -1,0 +1,6 @@
+name: PushGateway
+language: python
+variables: []
+dockerfile: dockerfile
+runEntryPoint: dockerfile
+defaultFile: prometheus.yml
