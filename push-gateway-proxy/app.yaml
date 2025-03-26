@@ -1,0 +1,18 @@
+name: Push Gateway proxy
+language: python
+variables:
+  - name: PUSHGATEWAY_URL
+    inputType: FreeText
+    defaultValue: pushgateway:80
+    required: true
+  - name: BASIC_AUTH_USER
+    inputType: FreeText
+    defaultValue: admin
+  - name: BASIC_AUTH_PASS
+    inputType: Secret
+    defaultValue: admin_passport
+    required: true
+dockerfile: dockerfile
+runEntryPoint: main.py
+defaultFile: main.py
+libraryItemId: http-api-sample
