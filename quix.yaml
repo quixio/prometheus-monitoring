@@ -57,9 +57,6 @@ deployments:
       cpu: 1000
       memory: 4000
       replicas: 1
-    publicAccess:
-      enabled: true
-      urlPrefix: pushgateway-bd0c957
     network:
       serviceName: pushgateway
       ports:
