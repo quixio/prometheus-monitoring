@@ -85,4 +85,25 @@ deployments:
         inputType: Secret
         required: true
         secretKey: admin_passport
+  - name: grafana-2
+    application: grafana-2
+    version: latest
+    deploymentType: Service
+    resources:
+      cpu: 200
+      memory: 500
+      replicas: 1
+    state:
+      enabled: true
+      size: 1
+    variables:
+      - name: GF_SECURITY_ADMIN_PASSWORD
+        inputType: Secret
+        description: Password for the admin user
+        required: true
+        secretKey: admin_passport
+      - name: INFLUXDB_TOKEN
+        inputType: Secret
+        description: The optional InfluxDB Token to use
+        secretKey: admin_passport
 
