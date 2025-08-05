@@ -17,6 +17,9 @@ deployments:
     publicAccess:
       enabled: true
       urlPrefix: grafana
+    state:
+      enabled: true
+      size: 1
     network:
       serviceName: grafana
       ports:
